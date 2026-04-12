@@ -12,16 +12,28 @@ const CTASection = () => (
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-orange-light font-bold px-8 py-6 text-base">
-          <Phone className="mr-2 h-5 w-5" /> (41) 99175-4245 
-        </Button>
-        <Button
-          size="lg"
-          variant="outline"
-          className="border-gray-500 text-gray-800 bg-white shadow-sm hover:bg-gray-200 hover:shadow-lg hover:text-gray-900 font-bold px-8 py-6 text-base transition"
+        <a
+          href="https://wa.me/5541991754245?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20frete.%0A%0ARota:%0AOrigem:%0ADestino:%0AData:%0A%0APeso%20aproximado:%0AVolume%20aproximado:"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none' }}
         >
-          <Mail className="mr-2 h-5 w-5" /> pjc.tranportes71@gmail.com
-        </Button>
+          <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-orange-light font-bold px-8 py-6 text-base">
+            <Phone className="mr-2 h-5 w-5" /> (41) 99175-4245
+          </Button>
+        </a>
+        <a
+          href="mailto:contato@pjctransportes.com?subject=Or%C3%A7amento%20de%20frete&body=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20frete.%0A%0ARota:%0AOrigem:%0ADestino:%0AData:%0A%0APeso%20aproximado:%0AVolume%20aproximado:"
+          style={{ textDecoration: 'none' }}
+        >
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-gray-500 text-gray-800 bg-white shadow-sm hover:bg-gray-200 hover:shadow-lg hover:text-gray-900 font-bold px-8 py-6 text-base transition"
+          >
+            <Mail className="mr-2 h-5 w-5" /> contato@pjctransportes.com
+          </Button>
+        </a>
       </div>
     </div>
   </section>
