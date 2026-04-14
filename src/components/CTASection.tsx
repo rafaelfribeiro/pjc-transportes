@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Mail } from "lucide-react";
 
 const CTASection = () => (
-  <section id="contato" className="py-20 bg-navy-gradient">
+  <section id="contato" className="py-20 bg-navy-gradient scroll-mt-24">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl md:text-4xl font-black text-primary-foreground mb-4">
         Pronto para Transportar sua Carga?

@@ -1,6 +1,17 @@
 import heroImg from "@/assets/hero-trucks.jpg";
 import { Button } from "@/components/ui/button";
+import { useCallback } from "react";
 import { ArrowRight } from "lucide-react";
+
+
+const scrollToSection = (id: string) => (e?: React.MouseEvent) => {
+  if (e) e.preventDefault();
+  const el = document.getElementById(id);
+  if (el) {
+    const y = el.getBoundingClientRect().top + window.scrollY - 96;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }
+};
 
 const HeroSection = () => (
   <section id="início" className="relative min-h-[90vh] flex items-center overflow-hidden">
@@ -26,20 +37,21 @@ const HeroSection = () => (
           Soluções logísticas completas com segurança, pontualidade e tecnologia de rastreamento em tempo real.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <a href="#contato" style={{ textDecoration: 'none' }}>
-            <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-orange-light font-bold px-8 py-6 text-base">
-              Solicitar Cotação <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </a>
-          <a href="#serviços" style={{ textDecoration: 'none' }}>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-gray-500 text-gray-800 bg-white shadow-sm hover:bg-gray-200 hover:shadow-lg hover:text-gray-900 font-bold px-8 py-6 text-base transition"
-            >
-              Nossos Serviços
-            </Button>
-          </a>
+          <Button
+            size="lg"
+            className="bg-secondary text-secondary-foreground hover:bg-orange-light font-bold px-8 py-6 text-base"
+            onClick={scrollToSection("contato")}
+          >
+            Solicitar Cotação <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-gray-500 text-gray-800 bg-white shadow-sm hover:bg-gray-200 hover:shadow-lg hover:text-gray-900 font-bold px-8 py-6 text-base transition"
+            onClick={scrollToSection("serviços")}
+          >
+            Nossos Serviços
+          </Button>
         </div>
       </div>
     </div>
